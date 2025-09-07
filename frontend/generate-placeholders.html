@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Imágenes Placeholder - PC Service Pro</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 2rem; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .image-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .image-card img { width: 100%; height: auto; border-radius: 4px; }
+        .image-card h4 { margin: 0.5rem 0; color: #333; }
+        .image-card p { margin: 0; color: #666; font-size: 0.875rem; }
+        button { background: #0d6efd; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin: 0.25rem; }
+        button:hover { background: #0056b3; }
+        .code-block { background: #f8f9fa; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-family: monospace; font-size: 0.875rem; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ Generador de Imágenes Placeholder</h1>
+        <p>Imágenes optimizadas para PC Service Pro usando SVG data URIs</p>
+        
+        <button onclick="generateAllImages()">🎨 Generar Todas las Imágenes</button>
+        <button onclick="downloadAssets()">📦 Descargar Assets</button>
+        
+        <div class="image-grid" id="imageGrid"></div>
+        
+        <h2>📋 URLs Generadas</h2>
+        <div class="code-block" id="urlList"></div>
+    </div>
+
+    <script>
+        const imageSpecs = [
+            // Hero Section
+            {
+                name: 'pc-repair-hero.jpg',
+                path: 'images/hero/',
+                width: 600,
+                height: 400,
+                type: 'hero',
+                title: 'Técnico Reparando PC',
+                description: 'Imagen principal del hero'
+            },
+            
+            // Services
+            {
+                name: 'cleaning-service.jpg',
+                path: 'images/services/',
+                width: 400,
+                height: 300,
+                type: 'service',
+                title: 'Servicio de Limpieza',
+                description: 'PC siendo limpiada'
+            },
+            
+            // About
+            {
+                name: 'technician-profile.jpg',
+                path: 'images/about/',
+                width: 400,
+                height: 500,
+                type: 'profile',
+                title: 'Perfil del Técnico',
+                description: 'Foto profesional del técnico'
+            },
+            
+            // Gallery Images
+            {
+                name: 'cleaning-before-after-1.jpg',
+                path: 'images/gallery/',
+                width: 400,
+                height: 300,
+                type: 'gallery',
+                title: 'Antes/Después Limpieza',
+                description: 'PC gaming limpieza profunda'
+            },
+            {
+                name: 'motherboard-repair.jpg',
+                path: 'images/gallery/',
+                width: 400,
+                height: 300,
+                type: 'gallery',
+                title: 'Reparación Motherboard',
+                description: 'Cambio de capacitores'
+            },
+            {
+                name: 'ram-upgrade.jpg',
+                path: 'images/gallery/',
+                width: 400,
+                height: 300,
+                type: 'gallery',
+                title: 'Upgrade RAM',
+                description: 'Instalación memoria 16GB'
+            },
+            {
+                name: 'laptop-cleaning.jpg',
+                path: 'images/gallery/',
+                width: 400,
+                height: 300,
+                type: 'gallery',
+                title: 'Limpieza Laptop',
+                description: 'Notebook Dell mantenimiento'
+            },
+            {
+                name: 'power-supply-repair.jpg',
+                path: 'images/gallery/',
+                width: 400,
+                height: 300,
+                type: 'gallery',
+                title: 'Reparación Fuente',
+                description: 'Fuente 650W reparada'
+            },
+            {
+                name: 'ssd-installation.jpg',
+                path: 'images/gallery/',
+                width: 400,
+                height: 300,
+                type: 'gallery',
+                title: 'Instalación SSD',
+                description: 'SSD 1TB instalado'
+            },
+            
+            // Testimonials
+            {
+                name: 'client-1.jpg',
+                path: 'images/testimonials/',
+                width: 100,
+                height: 100,
+                type: 'avatar',
+                title: 'María González',
+                description: 'Cliente satisfecha'
+            },
+            {
+                name: 'client-2.jpg',
+                path: 'images/testimonials/',
+                width: 100,
+                height: 100,
+                type: 'avatar',
+                title: 'Carlos Méndez',
+                description: 'Cliente satisfecho'
+            },
+            {
+                name: 'client-3.jpg',
+                path: 'images/testimonials/',
+                width: 100,
+                height: 100,
+                type: 'avatar',
+                title: 'Ana Rodríguez',
+                description: 'Cliente satisfecha'
+            },
+            {
+                name: 'client-4.jpg',
+                path: 'images/testimonials/',
+                width: 100,
+                height: 100,
+                type: 'avatar',
+                title: 'Diego Silva',
+                description: 'Cliente satisfecho'
+            },
+            {
+                name: 'client-5.jpg',
+                path: 'images/testimonials/',
+                width: 100,
+                height: 100,
+                type: 'avatar',
+                title: 'Laura Torres',
+                description: 'Cliente satisfecha'
+            }
+        ];
+
+        function generateSVGImage(spec) {
+            const { width, height, type, title, name } = spec;
+            
+            let content = '';
+            let bgColor = '#f8f9fa';
+            let iconColor = '#0d6efd';
+            let textColor = '#6c757d';
+            
+            switch (type) {
+                case 'hero':
+                    bgColor = '#e3f2fd';
+                    content = `
+                        <rect width="100%" height="100%" fill="${bgColor}"/>
+                        <g transform="translate(${width/2},${height/2-20})">
+                            <rect x="-60" y="-40" width="120" height="80" rx="8" fill="${iconColor}" opacity="0.8"/>
+                            <rect x="-50" y="-25" width="100" height="50" rx="4" fill="white"/>
+                            <circle cx="0" cy="0" r="8" fill="${iconColor}"/>
+                            <path d="M-15 15 L15 15 M-10 25 L10 25" stroke="${iconColor}" stroke-width="2"/>
+                        </g>
+                        <text x="50%" y="85%" text-anchor="middle" fill="${textColor}" font-family="Arial" font-size="16" font-weight="bold">${title}</text>
+                    `;
+                    break;
+                    
+                case 'service':
+                    bgColor = '#f3e5f5';
+                    content = `
+                        <rect width="100%" height="100%" fill="${bgColor}"/>
+                        <g transform="translate(${width/2},${height/2-15})">
+                            <rect x="-40" y="-30" width="80" height="60" rx="6" fill="${iconColor}" opacity="0.8"/>
+                            <path d="M-20 -10 L20 -10 M-15 0 L15 0 M-10 10 L10 10" stroke="white" stroke-width="2"/>
+                            <circle cx="25" cy="-25" r="8" fill="#ffc107"/>
+                            <path d="M25 -30 L25 -20 M20 -25 L30 -25" stroke="white" stroke-width="2"/>
+                        </g>
+                        <text x="50%" y="90%" text-anchor="middle" fill="${textColor}" font-family="Arial" font-size="14">${title}</text>
+                    `;
+                    break;
+                    
+                case 'profile':
+                    bgColor = '#e8f5e8';
+                    content = `
+                        <rect width="100%" height="100%" fill="${bgColor}"/>
+                        <g transform="translate(${width/2},${height/2-30})">
+                            <circle cx="0" cy="-20" r="25" fill="${iconColor}" opacity="0.8"/>
+                            <circle cx="0" cy="-25" r="8" fill="white"/>
+                            <path d="M-15 -10 Q0 0 15 -10" fill="white"/>
+                            <rect x="-20" y="10" width="40" height="30" rx="3" fill="${iconColor}" opacity="0.6"/>
+                            <path d="M-10 20 L10 20 M-8 25 L8 25 M-6 30 L6 30" stroke="white" stroke-width="1"/>
+                        </g>
+                        <text x="50%" y="90%" text-anchor="middle" fill="${textColor}" font-family="Arial" font-size="14">${title}</text>
+                    `;
+                    break;
+                    
+                case 'gallery':
+                    bgColor = '#fff3e0';
+                    content = `
+                        <rect width="100%" height="100%" fill="${bgColor}"/>
+                        <g transform="translate(${width/2},${height/2})">
+                            <rect x="-50" y="-30" width="100" height="60" rx="8" fill="${iconColor}" opacity="0.1"/>
+                            <circle cx="-30" cy="-10" r="6" fill="${iconColor}" opacity="0.6"/>
+                            <rect x="-10" y="-5" width="30" height="3" fill="${iconColor}" opacity="0.6"/>
+                            <rect x="-10" y="2" width="20" height="2" fill="${iconColor}" opacity="0.4"/>
+                            <rect x="-10" y="8" width="35" height="2" fill="${iconColor}" opacity="0.4"/>
+                            <path d="M20 -20 L40 0 L35 5 L15 -15 Z" fill="${iconColor}" opacity="0.3"/>
+                        </g>
+                        <text x="50%" y="90%" text-anchor="middle" fill="${textColor}" font-family="Arial" font-size="12">${title}</text>
+                    `;
+                    break;
+                    
+                case 'avatar':
+                    const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#f0932b'];
+                    const colorIndex = name.charCodeAt(0) % colors.length;
+                    bgColor = colors[colorIndex];
+                    const initials = title.split(' ').map(n => n[0]).join('').substring(0, 2);
+                    
+                    content = `
+                        <rect width="100%" height="100%" rx="50%" fill="${bgColor}"/>
+                        <text x="50%" y="50%" dy="0.35em" text-anchor="middle" fill="white" font-family="Arial" font-size="32" font-weight="bold">${initials}</text>
+                    `;
+                    break;
+                    
+                default:
+                    content = `
+                        <rect width="100%" height="100%" fill="${bgColor}"/>
+                        <rect x="20%" y="30%" width="60%" height="40%" rx="4" fill="${iconColor}" opacity="0.3"/>
+                        <text x="50%" y="85%" text-anchor="middle" fill="${textColor}" font-family="Arial" font-size="14">${title}</text>
+                    `;
+            }
+            
+            return `data:image/svg+xml;base64,${btoa(`
+                <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">
+                    ${content}
+                </svg>
+            `)}`;
+        }
+
+        function generateAllImages() {
+            const grid = document.getElementById('imageGrid');
+            const urlList = document.getElementById('urlList');
+            
+            grid.innerHTML = '';
+            let urls = [];
+            
+            imageSpecs.forEach(spec => {
+                const dataUri = generateSVGImage(spec);
+                
+                // Create image card
+                const card = document.createElement('div');
+                card.className = 'image-card';
+                card.innerHTML = `
+                    <img src="${dataUri}" alt="${spec.title}">
+                    <h4>${spec.name}</h4>
+                    <p>${spec.description}</p>
+                    <button onclick="downloadImage('${dataUri}', '${spec.name}')">📥 Descargar</button>
+                    <button onclick="copyToClipboard('${dataUri}')">📋 Copiar URL</button>
+                `;
+                grid.appendChild(card);
+                
+                urls.push(`${spec.path}${spec.name}: ${dataUri}`);
+            });
+            
+            urlList.innerHTML = urls.join('<br><br>');
+        }
+
+        function downloadImage(dataUri, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = dataUri;
+            link.click();
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('URL copiada al portapapeles');
+            });
+        }
+
+        function downloadAssets() {
+            // Generate favicon
+            const faviconSvg = `
+                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#0d6efd"/>
+                    <rect x="6" y="8" width="20" height="16" rx="2" fill="white"/>
+                    <rect x="8" y="10" width="16" height="8" fill="#0d6efd"/>
+                    <circle cx="16" cy="14" r="2" fill="white"/>
+                    <rect x="12" y="20" width="8" height="2" fill="white"/>
+                </svg>
+            `;
+            
+            const faviconUri = `data:image/svg+xml;base64,${btoa(faviconSvg)}`;
+            downloadImage(faviconUri, 'favicon.svg');
+            
+            alert('Assets descargados. Recuerda convertir el favicon.svg a .ico usando una herramienta online.');
+        }
+
+        // Generate images on page load
+        generateAllImages();
+    </script>
+</body>
+</html>

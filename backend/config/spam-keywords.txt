@@ -1,0 +1,155 @@
+# Spam Keywords Configuration File
+# Add suspicious words and phrases that should trigger spam detection
+# One keyword or phrase per line
+# Lines starting with # are comments
+
+# Spanish spam keywords
+oferta especial
+click aqui
+ganar dinero
+trabajo desde casa
+inversion minima
+dinero facil
+urgente respuesta
+felicidades has ganado
+promocion limitada
+reclama ahora
+sin costo alguno
+gratis total
+oportunidad unica
+metodo revolucionario
+secreto revelado
+millonario en dias
+negocio propio
+libertad financiera
+jubilate joven
+sin experiencia
+desde tu casa
+horarios flexibles
+ingresos garantizados
+dinero extra
+formula magica
+
+# English spam keywords
+make money fast
+work from home
+click here now
+free money
+urgent response
+congratulations you won
+limited time offer
+act now
+risk free
+guaranteed income
+no experience needed
+financial freedom
+retire early
+magic formula
+revolutionary method
+secret revealed
+millionaire in days
+own business
+flexible hours
+extra income
+
+# Suspicious products/services
+viagra
+cialis
+casino online
+loteria
+herencia millonaria
+bitcoin inversion
+criptomoneda
+forex trading
+trading automatico
+robot trading
+mlm
+piramide
+multinivel
+apuestas deportivas
+prestamos rapidos
+creditos faciles
+refinanciacion
+hipoteca
+seguro barato
+medicina alternativa
+pastillas adelgazar
+dieta milagrosa
+crema antiarrugas
+
+# Suspicious patterns
+!!!
+???
+URGENTE
+GRATIS
+PROMOCION
+OFERTA
+GANADOR
+PREMIO
+DESCUENTO
+REBAJA
+LIQUIDACION
+OPORTUNIDAD
+EXCLUSIVO
+LIMITADO
+ULTIMO DIA
+APROVECHA
+RECLAMA
+SOLICITA
+INSCRIBETE
+REGISTRATE
+
+# Technology-related spam
+hack
+crackeo
+pirateria
+software crackeado
+licencias baratas
+windows pirata
+office gratis
+antivirus crack
+juegos gratis
+peliculas gratis
+musica gratis
+netflix gratis
+spotify premium
+cuenta premium
+
+# Adult content
+xxx
+sexo
+adultos
+pornografia
+escort
+masajes
+terapeuticos
+relajantes
+citas
+encuentros
+discrecion
+
+# Nigerian prince / inheritance scams
+principe
+herencia
+testamento
+banco central
+abogado
+notario
+transferencia
+millones dolares
+beneficiario
+fallecido
+reclamar herencia
+documentos legales
+
+# Cryptocurrency scams
+mineria bitcoin
+pool mineria
+wallet segura
+inversion criptomonedas
+trading bot
+señales trading
+grupo vip
+curso trading
+mentor trading
+estrategia ganadora

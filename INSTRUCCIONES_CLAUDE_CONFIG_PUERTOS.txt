@@ -1,0 +1,76 @@
+===============================================
+🔧 INSTRUCCIONES CONFIGURACIÓN DE PUERTOS
+===============================================
+
+IMPORTANTE: Tienes que configurar el port forwarding en tu router ANTES de continuar con el deployment.
+
+📋 DATOS DE TU CONFIGURACIÓN:
+- IP Local PC: 192.168.0.70
+- IP Pública: 181.231.152.45
+- Dominio: reparaciones-la-plata.duckdns.org
+- Token DuckDNS: 575b336f-553e-4d00-b0cd-8b0455469e1b
+
+🌐 CONFIGURAR ROUTER - PORT FORWARDING:
+
+1. ACCEDER AL ROUTER:
+   - Abre navegador web
+   - Ve a: 192.168.0.1 o 192.168.1.1
+   - Usuario/contraseña: Mira etiqueta del router (ej: admin/admin)
+
+2. BUSCAR SECCIÓN:
+   - "Port Forwarding"
+   - "NAT Forwarding" 
+   - "Virtual Server"
+   - "Aplicaciones"
+   - "Servidor Virtual"
+
+3. AGREGAR 2 REGLAS:
+
+   REGLA 1 - HTTP:
+   - Nombre: HTTP-Web
+   - Puerto externo: 80
+   - IP interna: 192.168.0.70
+   - Puerto interno: 80
+   - Protocolo: TCP
+
+   REGLA 2 - HTTPS:
+   - Nombre: HTTPS-Web
+   - Puerto externo: 443
+   - IP interna: 192.168.0.70
+   - Puerto interno: 443
+   - Protocolo: TCP
+
+4. GUARDAR Y REINICIAR ROUTER
+
+📱 MARCAS COMUNES:
+- TP-Link: Avanzado → NAT Forwarding → Virtual Servers
+- D-Link: Advanced → Port Forwarding
+- Netgear: Dynamic DNS → Port Forwarding
+- Linksys: Smart Wi-Fi Tools → Port Forwarding
+- Movistar: Configuración → NAT → Aplicaciones
+
+🔍 VERIFICAR QUE FUNCIONA:
+- Desde tu celular (con datos móviles)
+- Ve a: http://181.231.152.45
+- Debería mostrar tu página web
+
+⚠️ TROUBLESHOOTING:
+- Si no funciona, verifica que la IP interna sea 192.168.0.70
+- Algunos routers requieren reiniciar después de cambios
+- Verifica que el firewall del router no bloquee los puertos
+
+===============================================
+
+🚀 CUANDO TERMINES:
+
+1. Ejecuta: cd /home/maxi-fiorina/Escritorio/REPARACIONEs
+2. Ejecuta: claude
+3. Dile: "ya configuré los puertos del router"
+4. Claude continuará automáticamente con el deployment
+
+===============================================
+
+URL FINAL DE TU SITIO:
+https://reparaciones-la-plata.duckdns.org
+
+===============================================

@@ -1,0 +1,510 @@
+/* PC Service Pro - Responsive Design */
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Navigation */
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        text-align: center;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 80px 0 40px;
+        text-align: center;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .hero-stats .row {
+        text-align: center;
+    }
+    
+    .hero-stats .stat-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Services */
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .service-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .service-icon i {
+        font-size: 2.5rem !important;
+    }
+    
+    /* About Section */
+    .about-content {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .about-content .display-5 {
+        font-size: 2rem;
+    }
+    
+    .about-item {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .certifications {
+        text-align: center;
+    }
+    
+    /* Gallery */
+    .gallery-filters {
+        margin-bottom: 2rem;
+    }
+    
+    .gallery-filters .btn {
+        margin: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .gallery-card {
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-author img {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-info-item {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* WhatsApp Button */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+    
+    .whatsapp-tooltip {
+        display: none;
+    }
+    
+    /* Footer */
+    footer .col-lg-4,
+    footer .col-lg-2,
+    footer .col-md-6 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Hero Section */
+    .hero-section {
+        padding: 90px 0 50px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    /* Services */
+    .service-card .card-body {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Gallery */
+    .gallery-card {
+        height: 220px;
+    }
+    
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Navigation */
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 3rem;
+    }
+    
+    /* Services */
+    .service-card .card-body {
+        padding: 2rem;
+    }
+    
+    /* About Section */
+    .about-content {
+        padding-left: 2rem;
+    }
+    
+    /* Gallery */
+    .gallery-card {
+        height: 240px;
+    }
+    
+    /* Testimonials */
+    .testimonial-card .card-body {
+        padding: 2rem;
+    }
+    
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: 3rem 2.5rem;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Hero Section */
+    .hero-content {
+        padding-right: 1rem;
+    }
+    
+    /* Services */
+    .service-card .card-body {
+        padding: 2.5rem 2rem;
+    }
+    
+    /* Gallery */
+    .gallery-card {
+        height: 260px;
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Container adjustments */
+    .container {
+        max-width: 1200px;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 120px 0 80px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 3.5rem;
+    }
+    
+    /* Services */
+    .service-card .card-body {
+        padding: 3rem 2rem;
+    }
+    
+    /* Gallery */
+    .gallery-card {
+        height: 280px;
+    }
+    
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: 4rem 3rem;
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+    .hero-section {
+        padding: 60px 0 40px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-stats {
+        margin-bottom: 2rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn {
+        min-height: 44px;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .nav-link {
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+    }
+    
+    .gallery-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Remove hover effects on touch devices */
+    .service-card:hover,
+    .testimonial-card:hover,
+    .about-item:hover,
+    .contact-info-item:hover {
+        transform: none;
+    }
+    
+    /* Ensure WhatsApp button is easily touchable */
+    .whatsapp-btn {
+        min-width: 60px;
+        min-height: 60px;
+    }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ensure crisp images and icons */
+    .hero-image img,
+    .gallery-card img,
+    .testimonial-author img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Media Queries */
+@media print {
+    @page {
+        margin: 1in;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .row {
+        display: block;
+    }
+    
+    .col-lg-6,
+    .col-lg-4,
+    .col-md-6 {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* Hide interactive elements */
+    .btn,
+    .gallery-overlay,
+    .whatsapp-float,
+    .navbar {
+        display: none !important;
+    }
+    
+    /* Ensure proper spacing for print */
+    section {
+        margin-bottom: 2rem;
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Accessibility - Screen Readers */
+@media screen and (max-width: 0) {
+    .sr-only {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
+}
+
+/* Custom Breakpoints for Specific Components */
+
+/* Gallery specific breakpoints */
+@media (min-width: 400px) and (max-width: 575.98px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Service cards optimal layout */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .services-grid .col-lg-4:nth-child(3n+1) {
+        clear: left;
+    }
+}
+
+/* Testimonials optimal layout */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .testimonials-grid .col-lg-4:nth-child(2n+1) {
+        clear: left;
+    }
+}
+
+/* Form Layout Adjustments */
+@media (max-width: 767.98px) {
+    .contact-form .row .col-md-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* WhatsApp Button Responsive Positioning */
+@media (max-width: 575.98px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+/* Very Small Screens (less than 320px) */
+@media (max-width: 319.98px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-buttons .btn {
+        font-size: 0.875rem;
+        padding: 0.875rem;
+    }
+    
+    .service-card .card-body {
+        padding: 1rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Large Screens (1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-section {
+        padding: 140px 0 100px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 4rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.375rem;
+    }
+    
+    .gallery-card {
+        height: 300px;
+    }
+    
+    .service-card .card-body {
+        padding: 3rem 2.5rem;
+    }
+}
+
+/* Ultra-wide screens (1920px and up) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 4.5rem;
+    }
+    
+    .gallery-card {
+        height: 350px;
+    }
+}
