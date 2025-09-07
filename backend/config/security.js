@@ -72,9 +72,9 @@ const securityConfig = {
             directives: {
                 defaultSrc: ["'self'"],
                 styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdn.jsdelivr.net"],
-                scriptSrc: ["'self'", "https://www.google.com", "https://www.gstatic.com"],
+                scriptSrc: ["'self'", "'unsafe-inline'", "https://www.google.com", "https://www.gstatic.com", "https://cdn.jsdelivr.net"],
                 imgSrc: ["'self'", "data:", "https:"],
-                fontSrc: ["'self'", "https://fonts.gstatic.com"],
+                fontSrc: ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net"],
                 connectSrc: ["'self'", "https://www.google.com"],
                 frameSrc: ["https://www.google.com"],
                 objectSrc: ["'none'"],
