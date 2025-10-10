@@ -51,7 +51,7 @@
     "axios": "^1.6.2",
     "bad-words": "^3.0.4",
     "bcrypt": "^5.1.1",
-    "better-sqlite3": "^9.2.2",
+    "better-sqlite3": "^11.7.0",
     "compression": "^1.7.4",
     "connect-sqlite3": "^0.9.13",
     "cookie-parser": "^1.4.6",
@@ -122,7 +122,7 @@
     "utf-8-validate": "^6.0.3"
   },
   "engines": {
-    "node": ">=18.0.0",
+    "node": "20.x",
     "npm": ">=9.0.0"
   },
   "keywords": [
