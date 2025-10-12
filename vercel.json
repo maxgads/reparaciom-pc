@@ -26,39 +26,7 @@
     },
     {
       "source": "/admin",
-      "destination": "/frontend/admin.html"
-    },
-    {
-      "source": "/css/:path*",
-      "destination": "/frontend/css/:path*"
-    },
-    {
-      "source": "/js/:path*",
-      "destination": "/frontend/js/:path*"
-    },
-    {
-      "source": "/images/:path*",
-      "destination": "/frontend/images/:path*"
-    },
-    {
-      "source": "/assets/:path*",
-      "destination": "/frontend/assets/:path*"
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/frontend/assets/favicon.ico"
-    },
-    {
-      "source": "/manifest.json",
-      "destination": "/frontend/assets/manifest.json"
-    },
-    {
-      "source": "/sw.js",
-      "destination": "/frontend/sw.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/frontend/index.html"
+      "destination": "/admin.html"
     }
   ],
   "headers": [
