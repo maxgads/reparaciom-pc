@@ -1,9 +1,9 @@
 const axios = require('axios');
-const { database } = require('../../backend/utils/supabase-db');
-const { inputValidator } = require('../../backend/middleware/validator');
-const { emailService } = require('../../backend/utils/email');
-const { securityConfig } = require('../../backend/config/security');
-const { logger, SecurityLogger } = require('../../backend/utils/logger');
+const { database } = require('../_shared/supabase-db');
+const { inputValidator } = require('../_shared/validator');
+const { emailService } = require('../_shared/email');
+const { securityConfig } = require('../_shared/security');
+const { logger, SecurityLogger } = require('../_shared/logger');
 
 class RecaptchaService {
     constructor() {

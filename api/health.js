@@ -1,5 +1,5 @@
-const { database } = require('../backend/utils/supabase-db');
-const { emailService } = require('../backend/utils/email');
+const { database } = require('./_shared/supabase-db');
+const { emailService } = require('./_shared/email');
 const packageJson = require('../package.json');
 
 let dbInitialized = false;

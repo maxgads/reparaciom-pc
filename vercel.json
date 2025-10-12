@@ -1,45 +1,64 @@
 {
   "version": 2,
   "name": "servicio-reparacion-pc",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "source": "/api/contact/submit",
+      "destination": "/api/contact/submit.js"
     },
     {
-      "src": "/admin",
-      "dest": "/frontend/admin.html"
+      "source": "/api/contact/config",
+      "destination": "/api/contact/config.js"
     },
     {
-      "src": "/(css|js|images|assets)/(.+)",
-      "dest": "/frontend/$1/$2"
+      "source": "/api/health",
+      "destination": "/api/health.js"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/frontend/assets/favicon.ico"
+      "source": "/api/analytics/visit",
+      "destination": "/api/analytics/visit.js"
     },
     {
-      "src": "/manifest.json",
-      "dest": "/frontend/assets/manifest.json"
+      "source": "/api/analytics/whatsapp-click",
+      "destination": "/api/analytics/whatsapp-click.js"
     },
     {
-      "src": "/sw.js",
-      "dest": "/frontend/sw.js"
+      "source": "/admin",
+      "destination": "/frontend/admin.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/frontend/index.html"
+      "source": "/css/:path*",
+      "destination": "/frontend/css/:path*"
+    },
+    {
+      "source": "/js/:path*",
+      "destination": "/frontend/js/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "destination": "/frontend/images/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/frontend/assets/:path*"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/frontend/assets/favicon.ico"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/frontend/assets/manifest.json"
+    },
+    {
+      "source": "/sw.js",
+      "destination": "/frontend/sw.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/index.html"
     }
   ],
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
-  "env": {
-    "NODE_ENV": "production"
-  },
   "headers": [
     {
       "source": "/api/(.*)",
@@ -84,28 +103,15 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/api/contact/submit",
-      "destination": "/api/contact/submit.js"
-    },
-    {
-      "source": "/api/contact/config",
-      "destination": "/api/contact/config.js"
-    },
-    {
-      "source": "/api/health",
-      "destination": "/api/health.js"
-    },
-    {
-      "source": "/api/analytics/visit",
-      "destination": "/api/analytics/visit.js"
-    },
-    {
-      "source": "/api/analytics/whatsapp-click",
-      "destination": "/api/analytics/whatsapp-click.js"
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
     }
-  ],
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
   "regions": ["gru1"],
   "cleanUrls": true,
   "trailingSlash": false

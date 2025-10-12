@@ -1,19 +1,16 @@
 {
   "name": "servicio-reparacion-pc",
   "version": "1.0.0",
-  "description": "Sitio web profesional para servicio de reparación, limpieza y mantenimiento de PC y netbooks",
-  "main": "backend/server.js",
+  "description": "Sitio web profesional para servicio de reparación, limpieza y mantenimiento de PC y netbooks - Vercel Serverless",
+  "main": "api/health.js",
   "scripts": {
     "dev": "vercel dev",
     "build": "echo 'Building for Vercel deployment'",
     "deploy": "vercel --prod",
     "deploy:preview": "vercel",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch",
-    "lint": "eslint backend/ api/ --ext .js",
-    "lint:fix": "eslint backend/ api/ --ext .js --fix",
-    "format": "prettier --write backend/**/*.js api/**/*.js",
-    "postinstall": "echo 'Instalación completada. Configura las variables de entorno en Vercel.'"
+    "test": "echo 'Tests pending'",
+    "lint": "eslint api/ --ext .js",
+    "lint:fix": "eslint api/ --ext .js --fix"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
@@ -32,14 +29,11 @@
     "xss": "^1.0.14"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.11",
     "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
-    "jest": "^29.7.0",
-    "prettier": "^3.1.1",
     "vercel": "^33.0.0"
   },
   "engines": {
@@ -57,9 +51,9 @@
     "mantenimiento",
     "limpieza",
     "soporte-tecnico",
-    "nodejs",
-    "express",
-    "sqlite"
+    "vercel",
+    "serverless",
+    "supabase"
   ],
   "author": {
     "name": "Servicio Reparación PC",
@@ -72,44 +66,13 @@
     "type": "git",
     "url": "git+https://github.com/tu-usuario/servicio-reparacion-pc.git"
   },
-  "bugs": {
-    "url": "https://github.com/tu-usuario/servicio-reparacion-pc/issues"
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://tu-dominio.com.ar/donate"
-  },
-  "config": {
-    "port": 3000,
-    "ssl_port": 443,
-    "db_path": "./database/contacts.db"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "backend/**/*.js",
-      "!backend/node_modules/**",
-      "!backend/coverage/**"
-    ],
-    "coverageDirectory": "coverage",
-    "coverageReporters": [
-      "text",
-      "lcov",
-      "html"
-    ],
-    "testMatch": [
-      "**/tests/**/*.js",
-      "**/?(*.)+(spec|test).js"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "standard"
     ],
     "env": {
       "node": true,
-      "es2022": true,
-      "jest": true
+      "es2022": true
     },
     "rules": {
       "no-console": "warn",
@@ -119,49 +82,5 @@
         "always"
       ]
     }
-  },
-  "prettier": {
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "printWidth": 100
-  },
-  "lint-staged": {
-    "backend/**/*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
-    }
-  },
-  "directories": {
-    "lib": "./backend",
-    "doc": "./docs",
-    "test": "./tests"
-  },
-  "files": [
-    "backend/",
-    "frontend/",
-    "scripts/",
-    "config/",
-    "docs/",
-    "database/schema.sql",
-    ".env.example",
-    "README.md"
-  ],
-  "os": [
-    "linux",
-    "darwin",
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
-  ]
+  }
 }

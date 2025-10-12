@@ -1,5 +1,5 @@
-const { database } = require('../../backend/utils/supabase-db');
-const { logger } = require('../../backend/utils/logger');
+const { database } = require('../_shared/supabase-db');
+const { logger } = require('../_shared/logger');
 
 let dbInitialized = false;
 

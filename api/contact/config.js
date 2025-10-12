@@ -1,4 +1,4 @@
-const { inputValidator } = require('../../backend/middleware/validator');
+const { inputValidator } = require('../_shared/validator');
 
 module.exports = async (req, res) => {
     // Set CORS headers
