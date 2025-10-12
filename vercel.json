@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "servicio-reparacion-pc",
+  "buildCommand": null,
   "rewrites": [
     {
       "source": "/api/contact/submit",
