@@ -76,6 +76,9 @@ jspm_packages/
 # Serverless directories
 .serverless
 
+# Vercel
+.vercel
+
 # IDE files
 .vscode/
 .idea/

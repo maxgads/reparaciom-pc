@@ -4,7 +4,11 @@
       "Bash(node:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(sudo ufw allow:*)",
+      "Bash(sudo:*)",
+      "Bash(sudo ufw:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

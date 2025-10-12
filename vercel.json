@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "name": "servicio-reparacion-pc",
+  "builds": [
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/admin",
+      "dest": "/frontend/admin.html"
+    },
+    {
+      "src": "/(css|js|images|assets)/(.+)",
+      "dest": "/frontend/$1/$2"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/frontend/assets/favicon.ico"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/frontend/assets/manifest.json"
+    },
+    {
+      "src": "/sw.js",
+      "dest": "/frontend/sw.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/index.html"
+    }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/contact/submit",
+      "destination": "/api/contact/submit.js"
+    },
+    {
+      "source": "/api/contact/config",
+      "destination": "/api/contact/config.js"
+    },
+    {
+      "source": "/api/health",
+      "destination": "/api/health.js"
+    },
+    {
+      "source": "/api/analytics/visit",
+      "destination": "/api/analytics/visit.js"
+    },
+    {
+      "source": "/api/analytics/whatsapp-click",
+      "destination": "/api/analytics/whatsapp-click.js"
+    }
+  ],
+  "regions": ["gru1"],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
