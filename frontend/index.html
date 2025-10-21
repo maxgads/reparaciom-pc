@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reparación PC La Plata - Service técnico a domicilio en La Plata casco urbano. Limpieza, reparación hardware, instalación Windows. ✓ Garantía 2 meses ✓ Presupuesto gratis ✓ Estudiante UNLP">
-    <meta name="keywords" content="reparacion pc la plata, service notebook la plata, tecnico pc domicilio la plata, limpieza computadora la plata, instalacion windows la plata">
+    <meta name="description" content="Reparación PC La Plata | Service técnico profesional a domicilio. Limpieza, reparación hardware, instalación Windows/Linux. ✓ Diagnóstico GRATIS ✓ Garantía 2-3 meses ✓ Estudiantes Ingeniería UNLP ✓ Zona: La Plata casco urbano">
+    <meta name="keywords" content="reparacion pc la plata, service notebook la plata, tecnico pc domicilio la plata, limpieza computadora la plata, instalacion windows la plata, reparacion motherboard la plata, limpieza pc gaming la plata, upgrade ram la plata, servicio tecnico pc unlp, formateo pc la plata">
     <meta name="author" content="Reparaciones La Plata">
     <meta name="geo.region" content="AR-B">
     <meta name="geo.placename" content="La Plata">
@@ -40,7 +40,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="assets/manifest.json">
-    <meta name="theme-color" content="#0d6efd">
+    <meta name="theme-color" content="#3b82f6">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="css/style.css" as="style">
@@ -59,9 +59,53 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Reparaciones La Plata",
-        "description": "Servicio de reparación, limpieza y mantenimiento de PC y notebooks en La Plata",
-        "serviceType": "Computer Repair Service",
-        "areaServed": "La Plata, Buenos Aires, Argentina",
+        "image": "https://reparacioneslaplata.com/images/about/technician-profile.jpg",
+        "description": "Servicio de reparación, limpieza y mantenimiento de PC y notebooks en La Plata. Estudiantes de Ingeniería UNLP con experiencia en electrotecnia.",
+        "url": "https://reparacioneslaplata.com",
+        "telephone": "+54-221-1234567",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Casco Urbano",
+            "addressLocality": "La Plata",
+            "addressRegion": "Buenos Aires",
+            "postalCode": "1900",
+            "addressCountry": "AR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -34.9215,
+            "longitude": -57.9545
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "10:00",
+                "closes": "18:00"
+            }
+        ],
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": -34.9215,
+                "longitude": -57.9545
+            },
+            "geoRadius": "15000"
+        },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Servicios de Reparación PC",
@@ -71,18 +115,61 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Limpieza profunda de PC",
-                        "description": "Limpieza completa interna y externa"
-                    }
+                        "description": "Limpieza completa interna y externa, cambio de pasta térmica",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Reparaciones La Plata"
+                        }
+                    },
+                    "price": "30000",
+                    "priceCurrency": "ARS"
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Reparación de hardware",
-                        "description": "Reparación de memorias, discos duros, fuentes de poder"
+                        "description": "Diagnóstico y reparación de componentes: RAM, discos, fuentes",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Reparaciones La Plata"
+                        }
                     }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Optimización Software",
+                        "description": "Limpieza del sistema, eliminación de virus y malware",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Reparaciones La Plata"
+                        }
+                    },
+                    "price": "22000",
+                    "priceCurrency": "ARS"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Instalación Sistema Operativo",
+                        "description": "Instalación completa de Windows/Linux con drivers",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Reparaciones La Plata"
+                        }
+                    },
+                    "price": "35000",
+                    "priceCurrency": "ARS"
                 }
             ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "3"
         }
     }
     </script>
@@ -108,13 +195,16 @@
                         <a class="nav-link" href="#services">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre Mí</a>
+                        <a class="nav-link" href="#about">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery">Galería</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#testimonials">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contacto</a>
@@ -128,31 +218,31 @@
     <section id="home" class="hero-section">
         <div class="container">
             <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <div class="hero-content">
+                <div class="col-lg-10 mx-auto">
+                    <div class="hero-content text-center">
                         <h1 class="display-4 fw-bold text-white mb-4">
-                            Reparación y Limpieza de PC 
+                            Reparación y Limpieza de PC
                             <span class="text-warning">Profesional</span>
                         </h1>
                         <p class="lead text-white-50 mb-4">
-                            Estudiante de Ingeniería Aeroespacial UNLP especializado en reparación de computadoras. 
+                            Estudiante de Ingeniería Aeroespacial UNLP especializado en reparación de computadoras.
                             Servicio a domicilio en La Plata. Precios accesibles, diagnóstico gratuito y garantía asegurada.
                         </p>
                         <div class="hero-stats mb-4">
-                            <div class="row text-center">
-                                <div class="col-4">
+                            <div class="row text-center justify-content-center">
+                                <div class="col-lg-3 col-md-4 col-sm-4">
                                     <div class="stat-item">
                                         <h3 class="h2 text-warning mb-0">22+</h3>
                                         <small class="text-white-50">Equipos Reparados</small>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-3 col-md-4 col-sm-4">
                                     <div class="stat-item">
                                         <h3 class="h2 text-warning mb-0">3+</h3>
                                         <small class="text-white-50">Años Experiencia</small>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-3 col-md-4 col-sm-4">
                                     <div class="stat-item">
                                         <h3 class="h2 text-warning mb-0">100%</h3>
                                         <small class="text-white-50">Satisfacción</small>
@@ -168,11 +258,6 @@
                                 <i class="bi bi-arrow-down me-2"></i>Ver Servicios
                             </a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image text-center">
-                        <img src="images/hero/pc-repair-hero.jpg" alt="Técnico reparando computadora" class="img-fluid rounded-3 shadow-lg">
                     </div>
                 </div>
             </div>
@@ -319,16 +404,17 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="about-image">
-                        <img src="images/about/technician-profile.jpg" alt="Técnico especializado en reparación PC" class="img-fluid rounded-3 shadow">
+                        <img src="images/about/technician-profile.jpg" alt="Equipo de estudiantes de ingeniería UNLP especializados en reparación de computadoras en La Plata" class="img-fluid rounded-3 shadow" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <h2 class="display-5 fw-bold mb-4">Sobre Mí</h2>
+                        <h2 class="display-5 fw-bold mb-4">Sobre Nosotros</h2>
                         <p class="lead text-muted mb-4">
-                            Estudiante de Ingeniería Aeroespacial de la UNLP con sólida formación en electrotecnia.
-                            Mi pasión por la tecnología me ha llevado a especializarme en reparación de computadoras,
-                            ayudando a familiares y conocidos. Ahora ofrezco servicios profesionales con precios accesibles.
+                            Estudiantes de Ingeniería de la UNLP con formación en electrotecnia. Aplicamos nuestros
+                            conocimientos técnicos para ayudar a la comunidad y generar ingresos para financiar nuestros
+                            estudios. Contamos con amplia experiencia ayudando a familiares, amigos y conocidos.
+                            Ahora ofrecemos servicios profesionales con precios accesibles y garantía asegurada.
                         </p>
                         
                         <div class="row mb-4">
@@ -369,16 +455,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="certifications mb-4">
-                            <h5 class="mb-3">Formación</h5>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-primary p-2">Ing. Aeroespacial UNLP</span>
-                                <span class="badge bg-primary p-2">Electrotecnia</span>
-                                <span class="badge bg-primary p-2">Mantenimiento PC</span>
-                            </div>
-                        </div>
-                        
+
                         <a href="#contact" class="btn btn-primary btn-lg">
                             <i class="bi bi-person-check me-2"></i>Trabajar Conmigo
                         </a>
@@ -416,10 +493,10 @@
             <div class="row g-4" id="gallery-grid">
                 <div class="col-lg-4 col-md-6 gallery-item" data-category="cleaning">
                     <div class="gallery-card position-relative overflow-hidden rounded-3">
-                        <img src="images/gallery/cleaning-before-after-1.jpg" alt="Limpieza PC antes y después" class="img-fluid">
+                        <img src="images/gallery/cleaning-before-after-1.jpg" alt="Resultado de limpieza profunda de PC gaming mostrando reducción de temperatura" class="img-fluid" loading="lazy">
                         <div class="gallery-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/cleaning-before-after-1.jpg">
-                                <i class="bi bi-eye me-2"></i>Ver más
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/cleaning-before-after-1.jpg" aria-label="Ver imagen ampliada de limpieza PC gaming">
+                                <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver más
                             </button>
                         </div>
                     </div>
@@ -428,13 +505,13 @@
                         <small class="text-muted">Reducción de temperatura de 85°C a 65°C</small>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6 gallery-item" data-category="repair">
                     <div class="gallery-card position-relative overflow-hidden rounded-3">
-                        <img src="images/gallery/motherboard-repair.jpg" alt="Reparación motherboard" class="img-fluid">
+                        <img src="images/gallery/motherboard-repair.jpg" alt="Reparación de motherboard con cambio de capacitores en La Plata" class="img-fluid" loading="lazy">
                         <div class="gallery-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/motherboard-repair.jpg">
-                                <i class="bi bi-eye me-2"></i>Ver más
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/motherboard-repair.jpg" aria-label="Ver imagen ampliada de reparación motherboard">
+                                <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver más
                             </button>
                         </div>
                     </div>
@@ -443,13 +520,13 @@
                         <small class="text-muted">Cambio de capacitores dañados</small>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6 gallery-item" data-category="upgrade">
                     <div class="gallery-card position-relative overflow-hidden rounded-3">
-                        <img src="images/gallery/ram-upgrade.jpg" alt="Upgrade memoria RAM" class="img-fluid">
+                        <img src="images/gallery/ram-upgrade.jpg" alt="Upgrade de memoria RAM 16GB para mejorar rendimiento de PC" class="img-fluid" loading="lazy">
                         <div class="gallery-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/ram-upgrade.jpg">
-                                <i class="bi bi-eye me-2"></i>Ver más
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/ram-upgrade.jpg" aria-label="Ver imagen ampliada de upgrade RAM">
+                                <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver más
                             </button>
                         </div>
                     </div>
@@ -458,13 +535,13 @@
                         <small class="text-muted">Mejora significativa de rendimiento</small>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6 gallery-item" data-category="cleaning">
                     <div class="gallery-card position-relative overflow-hidden rounded-3">
-                        <img src="images/gallery/laptop-cleaning.jpg" alt="Limpieza laptop" class="img-fluid">
+                        <img src="images/gallery/laptop-cleaning.jpg" alt="Limpieza completa de notebook Dell con eliminación de polvo" class="img-fluid" loading="lazy">
                         <div class="gallery-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/laptop-cleaning.jpg">
-                                <i class="bi bi-eye me-2"></i>Ver más
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/laptop-cleaning.jpg" aria-label="Ver imagen ampliada de limpieza notebook">
+                                <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver más
                             </button>
                         </div>
                     </div>
@@ -473,13 +550,13 @@
                         <small class="text-muted">Eliminación completa de polvo acumulado</small>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6 gallery-item" data-category="repair">
                     <div class="gallery-card position-relative overflow-hidden rounded-3">
-                        <img src="images/gallery/power-supply-repair.jpg" alt="Reparación fuente de poder" class="img-fluid">
+                        <img src="images/gallery/power-supply-repair.jpg" alt="Reparación de fuente de poder 650W con cambio de ventilador" class="img-fluid" loading="lazy">
                         <div class="gallery-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/power-supply-repair.jpg">
-                                <i class="bi bi-eye me-2"></i>Ver más
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/power-supply-repair.jpg" aria-label="Ver imagen ampliada de reparación fuente">
+                                <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver más
                             </button>
                         </div>
                     </div>
@@ -488,13 +565,13 @@
                         <small class="text-muted">Cambio de ventilador y limpieza interna</small>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6 gallery-item" data-category="upgrade">
                     <div class="gallery-card position-relative overflow-hidden rounded-3">
-                        <img src="images/gallery/ssd-installation.jpg" alt="Instalación SSD" class="img-fluid">
+                        <img src="images/gallery/ssd-installation.jpg" alt="Instalación de disco SSD 1TB con migración completa del sistema operativo" class="img-fluid" loading="lazy">
                         <div class="gallery-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/ssd-installation.jpg">
-                                <i class="bi bi-eye me-2"></i>Ver más
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="images/gallery/ssd-installation.jpg" aria-label="Ver imagen ampliada de instalación SSD">
+                                <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver más
                             </button>
                         </div>
                     </div>
@@ -542,14 +619,14 @@
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                             </div>
-                            <blockquote class="blockquote mb-3">
-                                <p>"Excelente trabajo, muy buen precio y rápido. Mi notebook tenía problemas de temperatura y quedó como nueva después de la limpieza."</p>
-                            </blockquote>
+                            <p class="mb-3">
+                                Me solucionaron el problema de temperatura en mi notebook. Estaba andando lenta y se apagaba sola. Le hicieron limpieza y ahora funciona bien.
+                            </p>
                             <div class="testimonial-author d-flex align-items-center">
-                                <img src="images/testimonials/client-1.jpg" alt="Martín González" class="rounded-circle me-3" width="50" height="50">
+                                <img src="images/testimonials/client-1.jpg" alt="Foto de perfil de Martín G., cliente satisfecho" class="rounded-circle me-3" width="50" height="50" loading="lazy">
                                 <div>
-                                    <h6 class="mb-0">Martín González</h6>
-                                    <small class="text-muted">Estudiante UNLP</small>
+                                    <h6 class="mb-0">Martín G.</h6>
+                                    <small class="text-muted">Estudiante</small>
                                 </div>
                             </div>
                         </div>
@@ -564,27 +641,159 @@
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-secondary"></i>
                             </div>
-                            <blockquote class="blockquote mb-3">
-                                <p>"Muy recomendable, responsable y excelente atención. Arregló mi PC en el día y explicó todo claramente."</p>
-                            </blockquote>
+                            <p class="mb-3">
+                                Buen servicio. Tardó un poco más de lo que esperaba pero el precio estuvo bien y me explicó qué le había pasado a la PC. Funciona.
+                            </p>
                             <div class="testimonial-author d-flex align-items-center">
-                                <img src="images/testimonials/client-2.jpg" alt="Lucía Fernández" class="rounded-circle me-3" width="50" height="50">
+                                <img src="images/testimonials/client-2.jpg" alt="Foto de perfil de Carolina R., cliente" class="rounded-circle me-3" width="50" height="50" loading="lazy">
                                 <div>
-                                    <h6 class="mb-0">Lucía Fernández</h6>
-                                    <small class="text-muted">Centro de La Plata</small>
+                                    <h6 class="mb-0">Carolina R.</h6>
+                                    <small class="text-muted">La Plata</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-6 mx-auto text-center">
-                    <div class="alert alert-info">
-                        <i class="bi bi-info-circle me-2"></i>
-                        <strong>Construyendo reputación:</strong> Como emprendimiento estudiantil, estoy enfocado en ofrecer 
-                        servicios de calidad a precios accesibles para estudiantes y vecinos de La Plata.
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="testimonial-rating mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">
+                                Mi PC no prendía y pensé que estaba perdida. Me cambiaron la fuente y agregaron más memoria RAM. Buen precio para ser estudiante.
+                            </p>
+                            <div class="testimonial-author d-flex align-items-center">
+                                <img src="images/testimonials/client-1.jpg" alt="Foto de perfil de Lucas M., cliente satisfecho" class="rounded-circle me-3" width="50" height="50" loading="lazy">
+                                <div>
+                                    <h6 class="mb-0">Lucas M.</h6>
+                                    <small class="text-muted">Centro</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold">Preguntas Frecuentes</h2>
+                    <p class="lead text-muted">Respuestas a las consultas más comunes sobre nuestros servicios</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header" id="faqOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="bi bi-question-circle text-primary me-2"></i>
+                                    ¿Cuánto tiempo demora la reparación?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El tiempo de reparación varía según el problema. Una limpieza básica suele tomar 2-3 horas. Reparaciones de hardware pueden demorar 1-3 días dependiendo de la disponibilidad de repuestos. Siempre te informamos el tiempo estimado después del diagnóstico gratuito.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header" id="faqTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="bi bi-cash-coin text-primary me-2"></i>
+                                    ¿Qué incluye la garantía?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ofrecemos 2 meses de garantía en servicios de limpieza y 3 meses en reparaciones de hardware. La garantía cubre defectos relacionados con el trabajo realizado. No cubre daños por mal uso, líquidos derramados o modificaciones posteriores hechas por terceros.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header" id="faqThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="bi bi-calendar-check text-primary me-2"></i>
+                                    ¿Trabajan fines de semana?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, trabajamos los sábados de 9:00 a 20:00 y domingos de 10:00 a 18:00. Para servicio a domicilio en fin de semana, recomendamos agendar con anticipación mediante el formulario de contacto o WhatsApp.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header" id="faqFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                                    ¿Qué zona de La Plata cubren?
+                                </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Cubrimos todo el casco urbano de La Plata y alrededores en un radio de 15km. El servicio a domicilio tiene un costo adicional de $5.000 por viático. También podés traer tu equipo a nuestro taller sin costo adicional.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header" id="faqFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <i class="bi bi-tools text-primary me-2"></i>
+                                    ¿El diagnóstico tiene costo?
+                                </button>
+                            </h3>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No, el diagnóstico es completamente gratuito. Revisamos tu equipo, identificamos el problema y te damos un presupuesto sin compromiso. Solo cobramos si decidís proceder con la reparación.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header" id="faqSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <i class="bi bi-credit-card text-primary me-2"></i>
+                                    ¿Qué métodos de pago aceptan?
+                                </button>
+                            </h3>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="faqSix" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Aceptamos efectivo, transferencia bancaria y MercadoPago. Para servicios a domicilio, podés pagar al finalizar el trabajo. Te enviamos los datos de pago junto con el presupuesto.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h3 class="accordion-header" id="faqSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <i class="bi bi-shield-lock text-primary me-2"></i>
+                                    ¿Mis datos están seguros?
+                                </button>
+                            </h3>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="faqSeven" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, tratamos tu equipo con total confidencialidad. No accedemos a archivos personales sin tu permiso. Si necesitamos revisar el sistema, te pedimos autorización primero. Tus datos personales del formulario se usan solo para contactarte sobre el servicio.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -592,7 +801,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5">
@@ -746,7 +955,7 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6 class="text-uppercase mb-3">Enlaces</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#about" class="text-light-50 text-decoration-none">Sobre Mí</a></li>
+                        <li><a href="#about" class="text-light-50 text-decoration-none">Sobre Nosotros</a></li>
                         <li><a href="#gallery" class="text-light-50 text-decoration-none">Galería</a></li>
                         <li><a href="#testimonials" class="text-light-50 text-decoration-none">Testimonios</a></li>
                         <li><a href="#contact" class="text-light-50 text-decoration-none">Contacto</a></li>
